@@ -46,5 +46,5 @@ Material:
     - _WaterAlphaColor: 0.7
     - _WaterSpeed: 0.1
     m_Colors:
-    - _WaterColor: {r: 1, g: 0.85156566, b: 0.759434, a: 0.772549}
+    - _WaterColor: {r: 0.5411765, g: 1, b: 0.91894555, a: 0.772549}
   m_BuildTextureStacks: []

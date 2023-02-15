@@ -797,6 +797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fox
       objectReference: {fileID: 0}
+    - target: {fileID: 7524514951672591161, guid: d9012b6e22ca7bd40b8c1dbd216bb1d4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96c04af734d0e174eb7c6f950ff5907e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9012b6e22ca7bd40b8c1dbd216bb1d4, type: 3}
 --- !u!1001 &7720071957206739324
