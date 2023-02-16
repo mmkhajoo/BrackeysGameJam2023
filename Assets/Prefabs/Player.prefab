@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 1889926374}
   - component: {fileID: 1889926375}
   - component: {fileID: 7678688206059300536}
+  - component: {fileID: 6356409239044217344}
   - component: {fileID: 9072542619276463523}
   - component: {fileID: 8536020002078579545}
   - component: {fileID: 2220539272146128192}
@@ -154,7 +155,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019644022, y: -0.14657839}
+  m_Offset: {x: -0.0136089325, y: -0.20491779}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -165,7 +166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5341556, y: 0.5098506}
+  m_Size: {x: 0.5462258, y: 0.3931718}
   m_EdgeRadius: 0
 --- !u!58 &1813503968741676686
 CircleCollider2D:
@@ -180,7 +181,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15, y: 0.10738398}
+  m_Offset: {x: 0.18, y: 0.10738398}
   serializedVersion: 2
   m_Radius: 0.13058484
 --- !u!247 &1889926374
@@ -238,6 +239,18 @@ MonoBehaviour:
   _audioSource: {fileID: 9072542619276463523}
   _transitionAudioSource: {fileID: 8536020002078579545}
   _walkAudioSource: {fileID: 2220539272146128192}
+--- !u!114 &6356409239044217344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813503968741676677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f24a30d9a44ab892ec548a06fd95d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &9072542619276463523
 AudioSource:
   m_ObjectHideFlags: 0
@@ -611,6 +624,10 @@ PrefabInstance:
     - target: {fileID: 7524514950227272581, guid: d9012b6e22ca7bd40b8c1dbd216bb1d4, type: 3}
       propertyPath: m_Name
       value: Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524514951672591160, guid: d9012b6e22ca7bd40b8c1dbd216bb1d4, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7524514951672591160, guid: d9012b6e22ca7bd40b8c1dbd216bb1d4, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -7,6 +7,8 @@ namespace DefaultNamespace
     public class PlayerMovement : MonoBehaviour
     {
 
+        public Animator Animator => _animator;
+        
         [SerializeField] private Animator _animator;
         
         public event Action OnJump;
