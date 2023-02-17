@@ -1,9 +1,4 @@
-﻿using System;
-using Managers.Audio_Manager;
-using TMPro;
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 namespace Managers
 {
@@ -16,6 +11,16 @@ namespace Managers
                 instance = this;
 
             DontDestroyOnLoad(gameObject);
+        }
+
+        public void ResetShards()
+        {
+            var shards = FindObjectsOfType<IceShard>();
+
+            foreach (var shard in shards)
+            {
+                shard.ReCreateIceShard();
+            }
         }
     }
 }
