@@ -9,6 +9,10 @@ namespace DefaultNamespace
     {
         public Transform Transform => transform;
 
+        public GameObject FButton => _fButton;
+
+        public Animator Animator => _animator;
+
         #region Fields
 
 
@@ -20,6 +24,8 @@ namespace DefaultNamespace
         #region EnterButton
 
         [SerializeField] private GameObject _fButton;
+
+        [SerializeField] private Animator _animator;
 
         #endregion
 

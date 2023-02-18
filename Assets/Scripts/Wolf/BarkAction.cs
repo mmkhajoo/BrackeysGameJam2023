@@ -12,7 +12,13 @@ namespace Managers.Wolf
         [SerializeField] private Vector3 _pushAwayForceValue;
 
         [SerializeField] private float _waitTime = 2f;
+
+        [SerializeField] private Animator _animator;
+
+        [SerializeField] private CircleCollider2D _circleCollider2D;
         
+        private static readonly int Bark = Animator.StringToHash("Bark");
+
         private async void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
@@ -25,13 +31,21 @@ namespace Managers.Wolf
                 rigidBody2D.velocity = Vector2.zero;
                 
                 rigidBody2D.AddRelativeForce(_pushAwayForceValue);
+                
+                _animator.SetTrigger(Bark);
 
                  await Task.Delay((int)(_waitTime * 1000));
 
                  playerMovement.enabled = true;
                  
+                 
                 _onBarking?.Invoke();
             }
+        }
+
+        public void DisableBark()
+        {
+            _circleCollider2D.enabled = false;
         }
     }
 }

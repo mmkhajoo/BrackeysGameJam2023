@@ -19,7 +19,7 @@ public class IceShard : MonoBehaviour
 
     [SerializeField] private UnityEvent _onIceBlasted;
 
-    private void Start()
+    private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _gravityController = GetComponent<GravityController>();
@@ -27,7 +27,7 @@ public class IceShard : MonoBehaviour
         _initialPosition = transform.position;
         _initialRotation = transform.rotation;
 
-        Drop();
+        gameObject.SetActive(false);
     }
 
     public void Drop()
@@ -52,6 +52,8 @@ public class IceShard : MonoBehaviour
 
         _rigidbody2D.isKinematic = true;
         _gravityController.enabled = false;
+        
+        gameObject.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

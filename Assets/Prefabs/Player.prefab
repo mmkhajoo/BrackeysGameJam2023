@@ -221,6 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d65ead671bc4874a69d359022f93dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fButton: {fileID: 0}
+  _animator: {fileID: 8337385253063295425}
   _onPlayerStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -228,12 +230,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnPlayerJumped:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTransitioned:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerGotOut:
     m_PersistentCalls:
       m_Calls: []
   _audioSource: {fileID: 9072542619276463523}
@@ -251,6 +247,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f24a30d9a44ab892ec548a06fd95d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onStartPushing:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopPushing:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &9072542619276463523
 AudioSource:
   m_ObjectHideFlags: 0

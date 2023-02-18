@@ -75,7 +75,7 @@ public class CharacterController2D : MonoBehaviour
 
                 if (!wasGrounded)
                 {
-                    OnLandEvent.Invoke();
+                    OnLandEvent?.Invoke();
 
                     OnJumpAvailable?.Invoke();
                     _isJumpCalled = false;
