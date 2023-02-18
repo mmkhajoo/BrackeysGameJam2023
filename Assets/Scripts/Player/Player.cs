@@ -16,6 +16,13 @@ namespace DefaultNamespace
 
         #endregion
 
+
+        #region EnterButton
+
+        [SerializeField] private GameObject _fButton;
+
+        #endregion
+
         #region Controllers
 
         private PlayerMovement _playerMovement;
@@ -33,9 +40,6 @@ namespace DefaultNamespace
         [Header("Events")] [SerializeField] private PlayerStateEvent _onPlayerStateChanged;
         [SerializeField] private UnityEvent OnPlayerLand;
         [SerializeField] private UnityEvent OnPlayerJumped;
-        [SerializeField] private UnityEvent OnTransitioned;
-        [SerializeField] private UnityEvent OnPlayerGotOut;
-
 
         [Header("Audio Source")] [SerializeField]
         private AudioSource _audioSource;
@@ -146,7 +150,6 @@ namespace DefaultNamespace
             {
                 Disable();
                 
-           
                 _collisionTriggered = true;
             }
         }
@@ -159,6 +162,29 @@ namespace DefaultNamespace
                 
                 _collisionTriggered = true;
             }
+
+            if (collision.CompareTag("Interactable"))
+            {
+                ShowInteractButton();
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Interactable"))
+            {
+                HideInteractButton();
+            }
+        }
+
+        private void ShowInteractButton()
+        {
+            _fButton.SetActive(true);
+        }
+
+        private void HideInteractButton()
+        {
+            _fButton.SetActive(false);
         }
     }
 

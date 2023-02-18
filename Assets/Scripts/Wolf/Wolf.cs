@@ -1,5 +1,6 @@
 ﻿using MoreMountains.Feedbacks;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Managers.Wolf
 {
@@ -7,7 +8,7 @@ namespace Managers.Wolf
     {
         public bool Died => _died; 
         
-        [SerializeField] private MMFeedbacks _onWolfDie;
+        [SerializeField] private UnityEvent _onWolfDie;
 
         [SerializeField] private Animator _animator;
 
@@ -17,7 +18,7 @@ namespace Managers.Wolf
         {
             if (col.collider.CompareTag("Deadly"))
             {
-                _onWolfDie.PlayFeedbacks();
+                _onWolfDie?.Invoke();
 
                 _died = true;
                 

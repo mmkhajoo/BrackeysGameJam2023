@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
@@ -12,6 +13,9 @@ namespace DefaultNamespace
         private PlayerMovement _playerMovement;
 
         private bool _isPushAnimationPlaying;
+
+        public UnityEvent onStartPushing;
+        public UnityEvent onStopPushing;
 
         private void Start()
         {
@@ -41,6 +45,8 @@ namespace DefaultNamespace
             {
                 _playerMovement.Animator.Play(PushAnimation);
                 _isPushAnimationPlaying = true;
+                
+                onStartPushing?.Invoke();
             }
         }
 
@@ -59,6 +65,8 @@ namespace DefaultNamespace
         {
             _playerMovement.Animator.Play(IdleAnimation);
             _isPushAnimationPlaying = false;
+            
+            onStopPushing?.Invoke();
         }
     }
 }
