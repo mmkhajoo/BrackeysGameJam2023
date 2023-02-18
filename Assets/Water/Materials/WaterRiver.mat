@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 68e9877d2bc006e479a4e3cbde2b051f, type: 3}
+  m_Name: WaterRiver
+  m_Shader: {fileID: -6465566751694194690, guid: b91f3985906948343a554510f505bc10, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,14 +20,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_42bac67fc2474f24aea33de583339a9e_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1a9882947535c4d409b293e5e1c62a72, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 8400000, guid: 91e4e498aa787554cb35b622825decd7, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,9 +34,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _RefractionStrength: 0.7
-    - _WaterAlphaColor: 0.7
-    - _WaterSpeed: 0.1
+    - _BottomStrength: 3.32
+    - _RipplesAmount: 3.74
+    - _VoronoiScale: 5.74
+    - _VoronoiSpeed: 2.35
     m_Colors:
-    - _WaterColor: {r: 0.5411765, g: 1, b: 0.8425158, a: 0.772549}
+    - _RipplesColor: {r: 1.345381, g: 2.494128, b: 2.618318, a: 0}
+    - _RipplesSpeed: {r: 0, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
