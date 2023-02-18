@@ -26,8 +26,6 @@ public class IceShard : MonoBehaviour
 
         _initialPosition = transform.position;
         _initialRotation = transform.rotation;
-
-        gameObject.SetActive(false);
     }
 
     public void Drop()

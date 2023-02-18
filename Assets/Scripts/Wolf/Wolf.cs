@@ -15,7 +15,19 @@ namespace Managers.Wolf
 
         [SerializeField] private BoxCollider2D _boxCollider2D;
 
+        [SerializeField] private GameObject _skull;
+
         private bool _died;
+
+
+        public void ReplaceWithSkull()
+        {
+            _skull.SetActive(true);
+            
+            gameObject.SetActive(false);
+        }
+        
+        
         
         private void OnCollisionEnter2D(Collision2D col)
         {
