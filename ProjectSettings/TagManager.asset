@@ -18,7 +18,7 @@ TagManager:
   - Player
   - Ground
   - NotReflectOnWater
-  - 
+  - Post Process
   - 
   - 
   - 
@@ -45,9 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3528432835
+    locked: 0
+  - name: Ground
+    uniqueID: 145804055
+    locked: 0
   - name: Character
     uniqueID: 1842555797
     locked: 0
-  - name: Post VFX
+  - name: Forground
     uniqueID: 2071089737
     locked: 0
