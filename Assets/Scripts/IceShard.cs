@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using DefaultNamespace;
-using MoreMountains.Feedbacks;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class IceShard : MonoBehaviour
 {
@@ -15,11 +15,11 @@ public class IceShard : MonoBehaviour
 
     private Quaternion _initialRotation;
 
-    [SerializeField] private MMFeedbacks _onIceBeforeDrop;
+    [SerializeField] private UnityEvent _onIceBeforeDrop;
 
-    [SerializeField] private MMFeedbacks _onIceBlasted;
+    [SerializeField] private UnityEvent _onIceBlasted;
 
-    private void Start()
+    private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _gravityController = GetComponent<GravityController>();
@@ -27,7 +27,7 @@ public class IceShard : MonoBehaviour
         _initialPosition = transform.position;
         _initialRotation = transform.rotation;
 
-        Drop();
+        gameObject.SetActive(false);
     }
 
     public void Drop()
@@ -37,7 +37,7 @@ public class IceShard : MonoBehaviour
 
     private IEnumerator  DropIE()
     {
-        _onIceBeforeDrop?.PlayFeedbacks();
+        _onIceBeforeDrop?.Invoke();
         
         yield return new WaitForSeconds(Random.Range(_minDropTimer, _maxDropTimer));
 
@@ -52,12 +52,14 @@ public class IceShard : MonoBehaviour
 
         _rigidbody2D.isKinematic = true;
         _gravityController.enabled = false;
+        
+        gameObject.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        _onIceBlasted.PlayFeedbacks();
-        
+        _onIceBlasted?.Invoke();
+
         gameObject.SetActive(false);
     }
 }
