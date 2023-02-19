@@ -3,27 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="87fc09a6-3315-43a7-98fd-13720c09240d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGameJam2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGameJam2023/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Wood/woodMove.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Wood/woodMove.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Febucci.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/Visual Scripting - Integration.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/Visual Scripting - Integration.unitypackage.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/IceShard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/IceShard.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main/Main Camera Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BreakTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BreakTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HandleInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HandleInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceShard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceShard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RespawnableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RespawnableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound&amp;Music/TestFeel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound&amp;Music/TestFeel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wolf/BarkAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wolf/BarkAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

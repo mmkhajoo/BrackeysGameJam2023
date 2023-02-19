@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     private string _firstText="A little <color=orange>fox</color> embarks on a <wave><rainb>new adventure</rainb></wave>";
     private string _secondText="The <color=orange>fox</color> encounters an old <color=red>enemy</color>, <shake>a <color=red>wolf</color></shake>, <pend>who blocks its path</pend>";
     private string _thirdText = "In order to continue its adventure, the <color=orange>fox</color> brought an <color=red>end</color> to the <color=red>wolf</color>'s interference";
-    private string _forthText = "Sometimes, in order to begin something <wave><color=orange>new</color></wave>, we must first bring an <shake><color=red>end</color></shake> to something else";
+    private string _forthText = "Sometimes, in order to begin something <wave><color=orange>new</color></wave>, we must first bring an <color=red>end</color> to something else";
 
     private bool isGameStarted = false;
     private void Awake()

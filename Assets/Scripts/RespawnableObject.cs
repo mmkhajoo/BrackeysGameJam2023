@@ -19,24 +19,24 @@ namespace Managers
             _initialPosition = transform.position;
         }
 
-        private async void OnTriggerEnter2D(Collider2D col)
+        void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Water"))
             {
-                gameObject.SetActive(false);
-
                 _onDrown?.Invoke();
                 
-                await Respawn();
+                StartCoroutine(Respawn());
                 
                 _onRespawn?.Invoke();
+                
+                //gameObject.SetActive(false);
+
             }
         }
 
-        private async Task Respawn()
+        IEnumerator Respawn()
         {
-            await Task.Delay((int)(_respawnDelay*1000));
-
+            yield return new WaitForSeconds(_respawnDelay);
             transform.position = _initialPosition;
             gameObject.SetActive(true);
             

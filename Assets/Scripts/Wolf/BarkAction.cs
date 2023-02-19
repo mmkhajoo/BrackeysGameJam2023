@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 using Task = System.Threading.Tasks.Task;
@@ -19,7 +20,7 @@ namespace Managers.Wolf
         
         private static readonly int Bark = Animator.StringToHash("Bark");
 
-        private async void OnTriggerEnter2D(Collider2D col)
+        void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
             {
@@ -34,18 +35,22 @@ namespace Managers.Wolf
                 
                 _animator.SetTrigger(Bark);
 
-                 await Task.Delay((int)(_waitTime * 1000));
-
-                 playerMovement.enabled = true;
-                 
-                 
-                _onBarking?.Invoke();
+                StartCoroutine(DoMyDelay(playerMovement));
             }
         }
 
         public void DisableBark()
         {
             _circleCollider2D.enabled = false;
+        }
+
+        IEnumerator DoMyDelay(PlayerMovement playerMovement)
+        {
+            yield return new WaitForSeconds(_waitTime);
+
+            playerMovement.enabled = true;
+            
+            _onBarking?.Invoke();
         }
     }
 }

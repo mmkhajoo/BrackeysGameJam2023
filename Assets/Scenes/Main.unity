@@ -315,6 +315,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2915266607025978673, guid: ba79b9b3defc5874289580569a13c7b6, type: 3}
+      propertyPath: _respawnDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915266607025978673, guid: ba79b9b3defc5874289580569a13c7b6, type: 3}
       propertyPath: _onDrown.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -822,7 +826,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _respawnDelay: 1
+  _respawnDelay: 0
 --- !u!1 &36596051
 GameObject:
   m_ObjectHideFlags: 0
