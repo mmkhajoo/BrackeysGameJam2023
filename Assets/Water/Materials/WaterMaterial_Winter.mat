@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterMaterial
+  m_Name: WaterMaterial_Winter
   m_Shader: {fileID: -6465566751694194690, guid: 68e9877d2bc006e479a4e3cbde2b051f, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,9 +42,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _RefractionStrength: 0.7
-    - _WaterAlphaColor: 0.7
-    - _WaterSpeed: 0.1
+    - _RefractionStrength: 0
+    - _WaterAlphaColor: 0.3
+    - _WaterSpeed: 0
     m_Colors:
-    - _WaterColor: {r: 0.36320752, g: 0.9071753, b: 1, a: 0.772549}
+    - _WaterColor: {r: 0.5411765, g: 1, b: 0.8425158, a: 0.772549}
   m_BuildTextureStacks: []

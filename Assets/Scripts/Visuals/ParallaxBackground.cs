@@ -28,7 +28,7 @@ namespace Managers.Visuals
         {
             Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
             transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x,
-                deltaMovement.y * parallaxEffectMultiplier.y,transform.position.z);
+                deltaMovement.y * parallaxEffectMultiplier.y,0);
 
             lastCameraPosition = cameraTransform.position;
 

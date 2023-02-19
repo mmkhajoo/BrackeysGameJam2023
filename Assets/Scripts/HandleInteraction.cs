@@ -9,7 +9,7 @@ namespace Managers
 
         private bool _isInteractActive;
 
-        private void FixedUpdate()
+        private void Update()
         {
             if(!_isInteractActive)
                 return;
