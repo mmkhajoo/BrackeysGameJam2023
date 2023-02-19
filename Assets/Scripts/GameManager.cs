@@ -16,9 +16,19 @@ namespace Managers
         public UnityEvent _onWinter;
 
         public UnityEvent _onSpring;
+        
+        public UnityEvent _onStartChangingSeason;
+
+        public UnityEvent _onEndChangingSeason;
 
         private bool _isWinter = true;
 
+        public Transform SleepPos;
+        private Vector3 prevPos;
+
+        private bool isBranchBroken = false;
+        private bool isDyingWolfShownBefore = false;
+        
         private void Awake()
         {
             if (instance == null)
@@ -35,9 +45,12 @@ namespace Managers
 
             _wolf = FindObjectOfType<Wolf.Wolf>();
         }
-
+        
         public void ChangeSeason()
         {
+            _onStartChangingSeason.Invoke();
+            ChangeFoxPosToSleepPos();
+            
             if (_isWinter)
             {
                 StartCoroutine(ChangeSeasonToSpring());
@@ -87,6 +100,7 @@ namespace Managers
 
             yield return new WaitForSeconds(2f);
 
+            ChangeFoxPosToNormalPos();
             _player.Animator.Play("Fox_Idle");
 
             ResetShards();
@@ -100,6 +114,8 @@ namespace Managers
                 _wolf.ReplaceWithSkull();
             }
 
+            _onEndChangingSeason.Invoke();
+            
             //TODO : Change Sprites;
         }
 
@@ -112,10 +128,11 @@ namespace Managers
 
             yield return new WaitForSeconds(2f);
 
-            _onWinter?.Invoke();
+            _onSpring?.Invoke();
 
             yield return new WaitForSeconds(2f);
 
+            ChangeFoxPosToNormalPos();
             _player.Animator.Play("Fox_Idle");
 
             DropShards();
@@ -124,7 +141,38 @@ namespace Managers
 
             _isWinter = false;
             
+            _onEndChangingSeason.Invoke();
+
+            if (isBranchBroken && !isDyingWolfShownBefore)
+            {
+                isDyingWolfShownBefore = true;
+                ShowWolfDying();
+            }
+                
             //TODO : Change Sprites;
+        }
+
+        private void ChangeFoxPosToSleepPos()
+        {
+            _player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            prevPos=_player.transform.position;
+            _player.transform.position=SleepPos.position;
+        }
+        
+        private void ChangeFoxPosToNormalPos()
+        {
+            _player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            _player.transform.position = prevPos;
+        }
+
+        public void BranchBroken()
+        {
+            isBranchBroken = true;
+        }
+
+        private void ShowWolfDying()
+        {
+            StartCoroutine(UIManager.instance.ShowThirdText());
         }
     }
 }

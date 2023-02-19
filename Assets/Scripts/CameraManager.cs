@@ -13,6 +13,8 @@ namespace Managers
         [SerializeField] private int _baseNumber = 10;
 
         [SerializeField] private CinemachineVirtualCamera _mainCamera;
+        
+        [SerializeField] private CinemachineVirtualCamera _startingCamera;
 
         [SerializeField] private CinemachineVirtualCamera _sleepCamera;
 
@@ -28,10 +30,15 @@ namespace Managers
 
                 DontDestroyOnLoad(gameObject);
             }
-            
-            ChangeCameraToMain();
+
+            ChangeCameraToStartMenu();
         }
 
+        public void ChangeCameraToStartMenu()
+        {
+            ChangeCamera(CameraType.StartMenu);
+        }
+        
         public void ChangeCameraToMain()
         {
             ChangeCamera(CameraType.Main);
@@ -70,6 +77,9 @@ namespace Managers
                 case CameraType.Ice:
                     _IceShaterOnWolf.Priority = _priorityNumber;
                     break;
+                case CameraType.StartMenu:
+                    _startingCamera.Priority = _priorityNumber;
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(cameraType), cameraType, null);
             }
@@ -85,6 +95,8 @@ namespace Managers
                 _wolfCamera.Priority = _baseNumber;
             if (_IceShaterOnWolf != null)
                 _IceShaterOnWolf.Priority = _baseNumber;
+            if (_startingCamera != null)
+                _startingCamera.Priority = _baseNumber;
         }
     }
 
@@ -95,5 +107,6 @@ namespace Managers
         Sleep = 2,
         Wolf = 3,
         Ice = 4,
+        StartMenu = 5,
     }
 }

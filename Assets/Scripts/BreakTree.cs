@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Managers
 {
@@ -15,7 +16,9 @@ namespace Managers
         [SerializeField] private float _timeToActiveNextTouch;
 
         private bool _isTouchActive;
-
+        
+        public UnityEvent _onBroken;
+        
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -36,6 +39,9 @@ namespace Managers
                 {
                     _animator.enabled = false;
                     _rigidbody2D.isKinematic = false;
+                    _rigidbody2D.GetComponent<Collider2D>().isTrigger = true;
+                    StartCoroutine(RemoveBranch());
+                    _onBroken.Invoke();
                 }
                 else if(_timesToBreak > 0)
                 {
@@ -54,5 +60,14 @@ namespace Managers
 
             _isTouchActive = true;
         }
+        
+        private IEnumerator RemoveBranch()
+        {
+            yield return new WaitForSeconds(1.0f);
+
+            _rigidbody2D.gameObject.SetActive(false);
+        }
+        
+        
     }
 }

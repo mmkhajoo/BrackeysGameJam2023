@@ -14,7 +14,7 @@ namespace Managers
             if(!_isInteractActive)
                 return;
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 _onInteractButtonClicked?.Invoke();
             }

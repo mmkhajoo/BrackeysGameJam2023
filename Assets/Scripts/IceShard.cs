@@ -19,6 +19,8 @@ public class IceShard : MonoBehaviour
 
     [SerializeField] private UnityEvent _onIceBlasted;
 
+    public GameObject brokenParticleSystem;
+    
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -58,6 +60,16 @@ public class IceShard : MonoBehaviour
     {
         _onIceBlasted?.Invoke();
 
+        GetComponent<SpriteRenderer>().enabled = false;
+
+        StartCoroutine(DisableGameObject());
+    }
+
+    IEnumerator DisableGameObject()
+    {
+        yield return new WaitForSeconds(0.6f);
         gameObject.SetActive(false);
+        brokenParticleSystem.SetActive(false);
+        GetComponent<SpriteRenderer>().enabled = true;
     }
 }

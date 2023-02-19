@@ -8,6 +8,7 @@ namespace Managers
     public class RespawnableObject : MonoBehaviour
     {
         [SerializeField] private UnityEvent _onRespawn;
+        [SerializeField] private UnityEvent _onDrown;
 
         [SerializeField] private float _respawnDelay;
 
@@ -24,6 +25,8 @@ namespace Managers
             {
                 gameObject.SetActive(false);
 
+                _onDrown?.Invoke();
+                
                 await Respawn();
                 
                 _onRespawn?.Invoke();
