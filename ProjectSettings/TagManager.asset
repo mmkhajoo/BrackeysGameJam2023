@@ -9,6 +9,7 @@ TagManager:
   - Deadly
   - Interactable
   - HeavyObject
+  - Water
   layers:
   - Default
   - TransparentFX
